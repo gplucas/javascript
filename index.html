@@ -71,9 +71,8 @@
 <p>Let's briefly recap the story of what happens when you load a web page in a browser. When you load a web page in your browser, you are running your code (the HTML, CSS, and JavaScript) inside an execution environment (the browser tab). This is like a factory that takes in raw materials (the code) and outputs a product (the web page).</p>
 <p>A very common use of JavaScript is to dynamically modify HTML and CSS to update a user interface.</p>
 <div class="info">Note that the code in your web documents is generally loaded and executed in the order it appears on the page. Errors may occur if JavaScript is loaded and run before the HTML and CSS that it is intended to modify.</div>
-
+<hr>
 <h3>A first splash into JavaScript</h3>
-
 <p>Thinking like a programmer - One of the hardest things to learn in programming is not the syntax you need to learn, but how to apply it to solve real world problems. You need to start thinking like a programmer — this generally involves looking at descriptions of what your program needs to do, working out what code features are needed to achieve those things, and how to make them work together.</p>
 <p>This requires a mixture of hard work, experience with the programming syntax, and practice — plus a bit of creativity. The more you code, the better you'll get at it.</p>
 <li><strong>Functions</strong></li>
@@ -89,14 +88,14 @@
 <p>Events are things that happen in the browser — a button being clicked, a page loading, a video playing, etc. — in response to which we can run blocks of code. The constructs that listen out for the event happening are called event listeners, and the blocks of code that run in response to the event firing are called event handlers.</p>
 <li><strong>Loops</strong></li>
 <p>Loops are a very important concept in programming, which allow you to keep running a piece of code over and over again, until a certain condition is met.</p>
-
+<hr>
 <h3>What went wrong? Troubleshooting JavaScript</h3>
 <p><strong>Types of error</strong></p>
 <p>Generally speaking, when you do something wrong in code, there are two main types of error that you'll come across:</p>
 <p>Syntax errors: These are spelling errors in your code that actually cause the program not to run at all, or stop working part way through — you will usually be provided with some error messages too. These are usually okay to fix, as long as you are familiar with the right tools and know what the error messages mean!</p>
 <p>Logic errors: These are errors where the syntax is actually correct but the code is not what you intended it to be, meaning that program runs successfully but gives incorrect results. These are often harder to fix than syntax errors, as there usually isn't an error message to direct you to the source of the error.</p>
 <div class="info">Note: console.log() is a really useful debugging function that prints a value to the console. So it will print the value of something to the console as soon as we have tried to set it in line x.</div>
-
+<hr>
 <h3>Storing the information you need — Variables</h3>
 <p><strong>What is a Variable</strong></p>
 <p>A variable is a container for a value, like a number we might use in a sum, or a string that we might use as part of a sentence.</p>
@@ -145,8 +144,28 @@
 <p>In the early days of JavaScript, constants didn't exist. In modern JavaScript, we have the keyword const, which lets us store values that can never be changed:</p>
 <script src="https://pastebin.com/embed_js/V0SZp0AA"></script>
 <p>const works in exactly the same way as let, except that you can't give a const a new value.</p>
-
+<hr>
 <h3>Basic math in JavaScript — numbers and operators</h3>
+<strong>Types of numbers</strong>
+<p>In programming, even the humble decimal number system that we all know so well is more complicated than you might think. We use different terms to describe different types of decimal numbers, for example:</p>
+<li><strong>Integers</strong> are floating-point numbers without a fraction. They can either be positive or negative, e.g. 10, 400, or -5.</li>
+<li><strong>Floating point numbers (floats)</strong> have decimal points and decimal places, for example 12.5, and 56.7786543.</li>
+<li><strong>Doubles</strong> are a specific type of floating point number that have greater precision than standard floating point numbers (meaning that they are accurate to a greater number of decimal places).</li>
+<p>We even have different types of number systems! Decimal is base 10 (meaning it uses 0–9 in each column), but we also have things like:</p>
+<li><strong>Binary</strong> — The lowest level language of computers; 0s and 1s.</li>
+<li><strong>Octal</strong> — Base 8, uses 0–7 in each column.</li>
+<li><strong>Hexadecimal</strong> — Base 16, uses 0–9 and then a–f in each column. You may have encountered these numbers before when setting colors in CSS.</li>
+<p><strong>Operator precedence</strong></p>
+<p>Some operators are applied before others when calculating the result of a calculation (referred to as an expression, in programming).  Operator precedence in JavaScript is the same as is taught in math classes in school — Multiply and divide are always done first, then add and subtract (the calculation is always evaluated from left to right).</p>
+<p>If you want to override operator precedence, you can put parentheses round the parts that you want to be explicitly dealt with first.</p>
+<p><strong>Increment and decrement operators</strong></p>
+<p>Sometimes you'll want to repeatedly add or subtract one to or from a numeric variable value. This can be conveniently done using the increment (++) and decrement (--) operators. We used ++ in our "Guess the number" game back in our first splash into JavaScript article, when we added 1 to our guessCount variable to keep track of how many guesses the user has left after each turn.</p>
+<p><strong>Assignment operators</strong></p>
+<p>Assignment operators are operators that assign a value to a variable. We have already used the most basic one, =, loads of times — it assigns the variable on the left the value stated on the right:</p>
+<p><strong>Comparison operators</strong></p>
+<p>Sometimes we will want to run true/false tests, then act accordingly depending on the result of that test — to do this we use comparison operators.</p>
+<hr>
+<h3>Handling text — strings in JavaScript</h3>
 
 </body>
 </html>
