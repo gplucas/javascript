@@ -76,28 +76,77 @@
 
 <p>Thinking like a programmer - One of the hardest things to learn in programming is not the syntax you need to learn, but how to apply it to solve real world problems. You need to start thinking like a programmer — this generally involves looking at descriptions of what your program needs to do, working out what code features are needed to achieve those things, and how to make them work together.</p>
 <p>This requires a mixture of hard work, experience with the programming syntax, and practice — plus a bit of creativity. The more you code, the better you'll get at it.</p>
-<li>Functions</li>
+<li><strong>Functions</strong></li>
 <p>Functions are reusable blocks of code that you can write once and run again and again, saving the need to keep repeating code all the time. This is really useful. There are a number of ways to define functions, but for now we'll concentrate on one simple type. Here we have defined a function by using the keyword function, followed by a name, with parentheses put after it. After that we put two curly braces ({ }). Inside the curly braces goes all the code that we want to run whenever we call the function.</p>
 <p>When we want to run the code, we type the name of the function followed by the parentheses.</p>
 <script src="https://pastebin.com/embed_js/m1qr6710"></script>
-<li>Operators</li>
+<li><strong>Operators</strong></li>
 <p>JavaScript operators allow us to perform tests, do math, join strings together, and other such things.</p>
-<li>Conditionals</li>
+<li><strong>Conditionals</strong></li>
 <p>A conditional code block allows you to run code selectively, depending on whether a certain condition is true or not. It looks a bit like a function, but it isn't. The simplest form of conditional block starts with the keyword if, then some parentheses, then some curly braces. Inside the parentheses we include a test. If the test returns true, we run the code inside the curly braces. If not, we don't, and move on to the next bit of code.</p>
 <script src="https://pastebin.com/embed_js/taWiHANv"></script>
-<li>Events</li>
+<li><strong>Events</strong></li>
 <p>Events are things that happen in the browser — a button being clicked, a page loading, a video playing, etc. — in response to which we can run blocks of code. The constructs that listen out for the event happening are called event listeners, and the blocks of code that run in response to the event firing are called event handlers.</p>
-<li>Loops</li>
+<li><strong>Loops</strong></li>
 <p>Loops are a very important concept in programming, which allow you to keep running a piece of code over and over again, until a certain condition is met.</p>
 
 <h3>What went wrong? Troubleshooting JavaScript</h3>
-<p>Types of error</p>
+<p><strong>Types of error</strong></p>
 <p>Generally speaking, when you do something wrong in code, there are two main types of error that you'll come across:</p>
 <p>Syntax errors: These are spelling errors in your code that actually cause the program not to run at all, or stop working part way through — you will usually be provided with some error messages too. These are usually okay to fix, as long as you are familiar with the right tools and know what the error messages mean!</p>
 <p>Logic errors: These are errors where the syntax is actually correct but the code is not what you intended it to be, meaning that program runs successfully but gives incorrect results. These are often harder to fix than syntax errors, as there usually isn't an error message to direct you to the source of the error.</p>
 <div class="info">Note: console.log() is a really useful debugging function that prints a value to the console. So it will print the value of something to the console as soon as we have tried to set it in line x.</div>
 
 <h3>Storing the information you need — Variables</h3>
+<p><strong>What is a Variable</strong></p>
+<p>A variable is a container for a value, like a number we might use in a sum, or a string that we might use as part of a sentence.</p>
+<div class="info">Note: We say variables contain values. This is an important distinction to make. Variables aren't the values themselves; they are containers for values. You can think of them being like little cardboard boxes that you can store things in.</div>
+<p><strong>Declaring a Variable</strong></p>
+<p>To use a variable, you've first got to create it — more accurately, we call this declaring the variable. To do this, we type the keyword var or let followed by the name you want to call your variable:</p>
+<script src="https://pastebin.com/embed_js/9CTgipPc"></script>
+<p>Here we're creating two variables called myName and myAge.</p>
+<p><strong>Initializing a variable</strong></p>
+<p>Once you've declared a variable, you can initialize it with a value. You do this by typing the variable name, followed by an equals sign (=), followed by the value you want to give it. For example:</p>
+<script src="https://pastebin.com/embed_js/d62MBWTt"></script>
+<p>You can declare and initialize a variable at the same time, like this:</p>
+<script src="https://pastebin.com/embed_js/BTzE2VGW"></script>
+<p>This is probably what you'll do most of the time, as it is quicker than doing the two actions on two separate lines.</p>
+<p><strong>The difference between var and let</strong></p>
+<p>The reasons are somewhat historical. Back when JavaScript was first created, there was only var. This works basically fine in most cases, but it has some issues in the way it works — its design can sometimes be confusing or downright annoying. So, let was created in modern versions of JavaScript, a new keyword for creating variables that works somewhat differently to var, fixing its issues in the process.</p>
+<p>(...) we recommend that you use let as much as possible in your code, rather than var. There is no reason to use var, unless you need to support old versions of Internet Explorer with your code (it doesn't support let until version 11; the modern Microsoft Edge browser supports let just fine).</p>
+<p><strong>An aside on variable naming rules</strong></p>
+<p>You can call a variable pretty much anything you like, but there are limitations. Generally, you should stick to just using Latin characters (0-9, a-z, A-Z) and the underscore character.</p>
+<p>You shouldn't use other characters because they may cause errors or be hard to understand for an international audience.</p>
+<p>Don't use underscores at the start of variable names — this is used in certain JavaScript constructs to mean specific things, so may get confusing.</p>
+<p>Don't use numbers at the start of variables. This isn't allowed and causes an error.</p>
+<p>A safe convention to stick to is so-called "lower camel case", where you stick together multiple words, using lower case for the whole first word and then capitalize subsequent words.</p>
+<p>Make variable names intuitive, so they describe the data they contain. Don't just use single letters/numbers, or big long phrases.</p>
+<p>Variables are case sensitive — so myage is a different variable from myAge.</p>
+<p>One last point: you also need to avoid using JavaScript reserved words as your variable names — by this, we mean the words that make up the actual syntax of JavaScript! So, you can't use words like var, function, let, and for as variable names. Browsers recognize them as different code items, and so you'll get errors.</p>
+<script src="https://pastebin.com/embed_js/aE8PafEK"></script>
+<p><strong>Variable types</strong></p>
+<p><strong>Numbers</strong></p>
+<p>You can store numbers in variables, either whole numbers like 30 (also called integers) or decimal numbers like 2.456 (also called floats or floating point numbers). You don't need to declare variable types in JavaScript, unlike some other programming languages. When you give a variable a number value, you don't include quotes:</p>
+<script src="https://pastebin.com/embed_js/zRfZQg97"></script>
+<p><strong>Strings</strong></p>
+<p>Strings are pieces of text. When you give a variable a string value, you need to wrap it in single or double quote marks; otherwise, JavaScript tries to interpret it as another variable name.</p>
+<script src="https://pastebin.com/embed_js/eeBaJm2x"></script>
+<p><strong>Booleans</strong></p>
+<p>Booleans are true/false values — they can have two values, true or false. These are generally used to test a condition, after which code is run as appropriate. So for example, a simple case would be:</p>
+<script src="https://pastebin.com/embed_js/ikX8zNKu"></script>
+<p><strong>Arrays</strong></p>
+<p>An array is a single object that contains multiple values enclosed in square brackets and separated by commas.</p>
+<script src="https://pastebin.com/embed_js/bgi81SMp"></script>
+<p><strong>Objects</strong></p>
+<p>In programming, an object is a structure of code that models a real-life object. You can have a simple object that represents a box and contains information about its width, length, and height, or you could have an object that represents a person, and contains data about their name, height, weight, what language they speak, how to say hello to them, and more.</p>
+<script src="https://pastebin.com/embed_js/RZjWeAz7"></script>
+<p><strong>Constants in JavaScript</strong></p>
+<p>Many programming languages have the concept of a constant — a value that once declared can't be changed. There are many reasons why you'd want to do this, from security (if a third party script changed such values it could cause problems) to debugging and code comprehension (it is harder to accidentally change values that shouldn't be changed and mess things up).</p>
+<p>In the early days of JavaScript, constants didn't exist. In modern JavaScript, we have the keyword const, which lets us store values that can never be changed:</p>
+<script src="https://pastebin.com/embed_js/V0SZp0AA"></script>
+<p>const works in exactly the same way as let, except that you can't give a const a new value.</p>
+
+<h3>Basic math in JavaScript — numbers and operators</h3>
 
 </body>
 </html>
