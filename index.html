@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>JavaScript Notes</title>
 <link rel="stylesheet" href="styles/style.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,7 @@
 <h1>My JavaScript notes</h1>
 <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript" target="_blank">Reference</a>
 
-<h3>JavaScript first steps</h3>
+<h3>JavaScript first steps <span class="completed">Completed</span></h3>
 <!-- First ordered list -->
 <ol>
   <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript" target="_blank">What is JavaScript?</a></li>
@@ -23,7 +23,7 @@
   <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods" target="_blank">Useful string methods</a></li>
   <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays" target="_blank">Arrays</a></li>
 </ol>
-<h3>JavaScript building blocks</h3>
+<h3>JavaScript building blocks <span class="studying">Studying</span></h3>
 <!-- Second ordered list -->
 <ol>
   <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals" target="_blank">Making decisions in your code — conditionals</a></li>
@@ -78,7 +78,7 @@
 <li><strong>Functions</strong></li>
 <p>Functions are reusable blocks of code that you can write once and run again and again, saving the need to keep repeating code all the time. This is really useful. There are a number of ways to define functions, but for now we'll concentrate on one simple type. Here we have defined a function by using the keyword function, followed by a name, with parentheses put after it. After that we put two curly braces ({ }). Inside the curly braces goes all the code that we want to run whenever we call the function.</p>
 <p>When we want to run the code, we type the name of the function followed by the parentheses.</p>
-<script src="https://pastebin.com/embed_js/m1qr6710"></script>
+<script src="https://pastebin.com/embed_js/wUAfkD7k"></script>
 <li><strong>Operators</strong></li>
 <p>JavaScript operators allow us to perform tests, do math, join strings together, and other such things.</p>
 <li><strong>Conditionals</strong></li>
@@ -122,7 +122,7 @@
 <p>Make variable names intuitive, so they describe the data they contain. Don't just use single letters/numbers, or big long phrases.</p>
 <p>Variables are case sensitive — so myage is a different variable from myAge.</p>
 <p>One last point: you also need to avoid using JavaScript reserved words as your variable names — by this, we mean the words that make up the actual syntax of JavaScript! So, you can't use words like var, function, let, and for as variable names. Browsers recognize them as different code items, and so you'll get errors.</p>
-<script src="https://pastebin.com/embed_js/aE8PafEK"></script>
+<script src="https://pastebin.com/embed_js/L6SwXHnv"></script>
 <p><strong>Variable types</strong></p>
 <p><strong>Numbers</strong></p>
 <p>You can store numbers in variables, either whole numbers like 30 (also called integers) or decimal numbers like 2.456 (also called floats or floating point numbers). You don't need to declare variable types in JavaScript, unlike some other programming languages. When you give a variable a number value, you don't include quotes:</p>
@@ -179,5 +179,22 @@
 <p>Arrays consist of square brackets and elements that are separated by commas.</p>
 <script src="https://pastebin.com/embed_js/qANzMU1y"></script>
 <p>In the above example, each element is a string, but in an array we can store various data types — strings, numbers, objects, and even other arrays. We can also mix data types in a single array — we do not have to limit ourselves to storing only numbers in one array, and in another only strings.</p>
+
+<h1>JavaScript building blocks</h1>
+<h3>Making decisions in your code — conditionals</h3>
+<p>In any programming language, the code needs to make decisions and carry out actions accordingly depending on different inputs. For example, in a game, if the player's number of lives is 0, then it's game over. In a weather app, if it is being looked at in the morning, show a sunrise graphic; show stars and a moon if it is nighttime.</p>
+<p><strong>if...else statements</strong></p>
+<script src="https://pastebin.com/embed_js/s6JM7nVW"></script>
+<p><strong>switch statements</strong></p>
+<p>if...else statements do the job of enabling conditional code well, but they are not without their downsides. They are mainly good for cases where you've got a couple of choices, and each one requires a reasonable amount of code to be run, and/or the conditions are complex (for example, multiple logical operators). For cases where you just want to set a variable to a certain choice of value or print out a particular statement depending on a condition, the syntax can be a bit cumbersome, especially if you've got a large number of choices.</p>
+<p>In such a case, switch statements are your friend — they take a single expression/value as an input, and then look through a number of choices until they find one that matches that value, executing the corresponding code that goes along with it. Here's some more pseudocode, to give you an idea:</p>
+<script src="https://pastebin.com/embed_js/CgfkX7cJ"></script>
+<p><strong>Ternary operator</strong></p>
+<p>The ternary or conditional operator is a small bit of syntax that tests a condition and returns one value/expression if it is true, and another if it is false — this can be useful in some situations, and can take up a lot less code than an if...else block if you have two choices that are chosen between via a true/false condition.</p>
+<script src="https://pastebin.com/embed_js/m3pi5MAq"></script>
+<hr>
+<h3>Looping code</h3>
+<p></p>
+
 </body>
 </html>

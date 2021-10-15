@@ -13,3 +13,13 @@ div {
   background-color: #e7f3fe;
   border-left: 6px solid #2196F3;
 }
+
+.completed {
+  background-color: #008000;
+  color:  white;
+}
+
+.studying {
+  background-color: #FF4500;
+  color:  white;
+}
