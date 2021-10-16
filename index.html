@@ -210,9 +210,27 @@
 <div class="info">Warning: With while and do...while — as with all loops — you must make sure that the initializer is incremented or, depending on the case, decremented, so the condition eventually becomes false. If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is called an infinite loop.</div>
 <p><strong>Which loop type should you use?</strong></p>
 <p>For basic uses, for, while, and do...while loops are largely interchangeable. They can all be used to solve the same problems, and which one you use will largely depend on your personal preference — which one you find easiest to remember or most intuitive.</p>
-
 <hr>
 <h3>Functions — reusable blocks of code</h3>
+<p>Another essential concept in coding is functions, which allow you to store a piece of code that does a single task inside a defined block, and then call that code whenever you need it using a single short command — rather than having to type out the same code multiple times.</p>
+<p>Pretty much anytime you make use of a JavaScript structure that features a pair of parentheses — () — and you're not using a common built-in language structure like a for loop, while or do...while loop, or if...else statement, you are making use of a function.</p>
+<p>The JavaScript language has many built-in functions to allow you to do useful things without having to write all that code yourself. In fact, some of the code you are calling when you invoke (a fancy word for run, or execute) a built in browser function couldn't be written in JavaScript — many of these functions are calling parts of the background browser code, which is written largely in low-level system languages like C++, not web languages like JavaScript.</p>
+<p>Bear in mind that some built-in browser functions are not part of the core JavaScript language — some are defined as part of browser APIs, which build on top of the default language to provide even more functionality.</p>
+<p><strong>Invoking functions</strong></p>
+<p>To actually use a function after it has been defined, you've got to run — or invoke — it. This is done by including the name of the function in the code somewhere, followed by parentheses.</p>
+<script src="https://pastebin.com/embed_js/BW2m75C5"></script>
+<div class="info">Note: This form of creating a function is also known as function declaration. It is always hoisted, so you can call function above function definition and it will work fine.</div>
+<p><strong>Function parameters</strong></p>
+<p>Some functions require parameters to be specified when you are invoking them — these are values that need to be included inside the function parentheses, which it needs to do its job properly.</p>
+<div class="info">Note: Parameters are sometimes called arguments, properties, or even attributes.</div>
+<p><strong>Function scope and conflicts</strong></p>
+<p>Let's talk a bit about scope — a very important concept when dealing with functions. When you create a function, the variables and other things defined inside the function are inside their own separate scope, meaning that they are locked away in their own separate compartments, unreachable from code outside the functions.</p>
+<p>The top level outside all your functions is called the global scope. Values defined in the global scope are accessible from everywhere in the code.</p>
+<p>JavaScript is set up like this for various reasons — but mainly because of security and organization. Sometimes you don't want variables to be accessible from everywhere in the code — external scripts that you call in from elsewhere could start to mess with your code and cause problems because they happen to be using the same variable names as other parts of the code, causing conflicts. This might be done maliciously, or just by accident.</p>
+<p>For example, say you have an HTML file that is calling in two external JavaScript files, and both of them have a variable and a function defined that use the same name.</p>
+
+<hr>
+<h3>Build your own function</h3>
 <p></p>
 
 </body>
