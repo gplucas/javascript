@@ -23,7 +23,7 @@
   <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods" target="_blank">Useful string methods</a></li>
   <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays" target="_blank">Arrays</a></li>
 </ol>
-<h3>JavaScript building blocks <span class="studying">Studying</span></h3>
+<h3>JavaScript building blocks <span class="completed">Completed</span></h3>
 <!-- Second ordered list -->
 <ol>
   <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals" target="_blank">Making decisions in your code — conditionals</a></li>
@@ -33,7 +33,7 @@
   <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Return_values" target="_blank">Function return values</a></li>
   <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events" target="_blank">Introduction to events</a></li>
 </ol>
-<h3>Introducing JavaScript objects</h3>
+<h3>Introducing JavaScript objects <span class="studying">Studying</span></h3>
 <!-- Third ordered list -->
 <ol>
   <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics" target="_blank">JavaScript object basics</a></li>
@@ -244,10 +244,27 @@
 <p><strong>Some extra function related tips:</strong></p>
 <p>Look at another example of writing error handling into functions. It is generally a good idea to check that any necessary parameters are validated, and that any optional parameters have some kind of default value provided. This way, your program will be less likely to throw errors.</p>
 <p>Think about the idea of creating a function library. As you go further into your programming career, you'll start doing the same kinds of things over and over again. It is a good idea to create your own library of utility functions to do these sorts of things. You can copy them over to new code, or even just apply it to HTML pages wherever you need it.</p>
-
 <hr>
 <h3>Introduction to events</h3>
-<p></p>
+<p>Events are actions or occurrences that happen in the system you are programming, which the system tells you about so you can respond to them in some way if desired. For example, if the user selects a button on a webpage, you might want to respond to that action by displaying an information box.</p>
+<p><strong>A series of fortunate events</strong></p>
+<p>As mentioned above, events are actions or occurrences that happen in the system you are programming — the system produces (or "fires") a signal of some kind when an event occurs, and provides a mechanism by which an action can be automatically taken (that is, some code running) when the event occurs. For example, in an airport, when the runway is clear for take off, a signal is communicated to the pilot. As a result, the plane can safely takeoff.</p>
+<p>In the case of the Web, events are fired inside the browser window, and tend to be attached to a specific item that resides in it — this might be a single element, set of elements, the HTML document loaded in the current tab, or the entire browser window. There are many different types of events that can occur. For example:</p>
+<li>The user selects a certain element or hovers the cursor over a certain element.</li>
+<li>The user chooses a key on the keyboard.</li>
+<li>The user resizes or closes the browser window.</li>
+<li>A web page finishes loading.</li>
+<li>A form is submitted.</li>
+<li>A video is played, paused, or finishes.</li>
+<li>An error occurs.</li>
+<p><div class="info">Each available event has an event handler, which is a block of code (usually a JavaScript function that you as a programmer create) that runs when the event fires. When such a block of code is defined to run in response to an event, we say we are registering an event handler. Note: Event handlers are sometimes called event listeners — they are pretty much interchangeable for our purposes, although strictly speaking, they work together. The listener listens out for the event happening, and the handler is the code that is run in response to it happening.</div></p>
+<div class="info">Note: Web events are not part of the core JavaScript language — they are defined as part of the APIs built into the browser.</div>
+<p><strong>What mechanism should I use?</strong></p>
+<p>There are only two methods you should consider for handling events:</p>
+<li>Event handler properties have less power and options, but are easier to use. So as you begin learning, you might want to start with these.</li>
+<li>addEventListener() is more complex, but also more powerful. So after you’ve begun learning, you should try to use it where possible.</li>
+
+<h1>Introducing JavaScript objects</h1>
 
 </body>
 </html>
