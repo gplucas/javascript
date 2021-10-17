@@ -8,6 +8,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script src="script/script.js"></script>
 
 <h1>My JavaScript notes</h1>
 <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript" target="_blank">Reference</a>
@@ -347,9 +349,19 @@ Mac users, for example, sometimes experience this as the spinning rainbow-colore
 <p><strong>Clearing intervals</strong></p>
 <p>setInterval() keeps running a task forever, unless you do something about it. You'll probably want a way to stop such tasks, otherwise you may end up getting errors when the browser can't complete any further versions of the task, or if the animation being handled by the task has finished. You can do this the same way you stop timeouts — by passing the identifier returned by the setInterval() call to the clearInterval() function:</p>
 <script src="https://pastebin.com/embed_js/2FnNGEjE"></script>
-
 <hr>
 <h3>Graceful asynchronous programming with Promises</h3>
+<p>Promises are a comparatively new feature of the JavaScript language that allow you to defer further actions until after a previous action has completed, or respond to its failure. This is useful for setting up a sequence of async operations to work correctly.</p>
+<p>Essentially, a Promise is an object that represents an intermediate state of an operation — in effect, a promise that a result of some kind will be returned at some point in the future. There is no guarantee of exactly when the operation will complete and the result will be returned, but there is a guarantee that when the result is available, or the promise fails, the code you provide will be executed in order to do something else with a successful result, or to gracefully handle a failure case.</p>
+<p><strong>Promise terminology recap</strong></p>
+<p>There was a lot to cover in the above section, so let's go back over it quickly to give you a short guide that you can bookmark and use to refresh your memory in the future. You should also go over the above section again a few more times to make sure these concepts stick.</p>
+<p>When a promise is created, it is neither in a success or failure state. It is said to be pending.</p>
+<p>When a promise returns, it is said to be resolved.</p>
+<p>A successfully resolved promise is said to be fulfilled. It returns a value, which can be accessed by chaining a .then() block onto the end of the promise chain. The callback function inside the .then() block will contain the promise's return value.</p>
+<p>An unsuccessful resolved promise is said to be rejected. It returns a reason, an error message stating why the promise was rejected. This reason can be accessed by chaining a .catch() block onto the end of the promise chain.</p>
+
+<hr>
+<h3>Making asynchronous programming easier with async and await</h3>
 <p></p>
 
 </body>
