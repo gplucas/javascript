@@ -320,9 +320,21 @@ Mac users, for example, sometimes experience this as the spinning rainbow-colore
 <p>This is a frustrating experience and isn't a good use of computer processing power — especially in an era in which computers have multiple processor cores available. There's no sense sitting there waiting for something when you could let the other task chug along on another processor core and let you know when it's done. This lets you get other work done in the meantime, which is the basis of asynchronous programming. It is up to the programming environment you are using (web browsers, in the case of web development) to provide you with APIs that allow you to run such tasks asynchronously.</p>
 <p><strong>Blocking code</strong></p>
 <p>Asynchronous techniques are very useful, particularly in web programming. When a web app runs in a browser and it executes an intensive chunk of code without returning control to the browser, the browser can appear to be frozen. This is called blocking; the browser is blocked from continuing to handle user input and perform other tasks until the web app returns control of the processor.</p>
-
 <hr>
 <h3>Introducing asynchronous JavaScript</h3>
+<p><strong>Asynchronous JavaScript</strong></p>
+<p>Many Web API features now use asynchronous code to run, especially those that access or fetch some kind of resource from an external device, such as fetching a file from the network, accessing a database and returning data from it, accessing a video stream from a web cam, or broadcasting the display to a VR headset.</p>
+<p>Why is this difficult to get to work using asynchronous code? Let's look at a quick example. When you fetch an image from a server, you can't return the result immediately. That means that the following (pseudocode) wouldn't work:</p>
+<script src="https://pastebin.com/embed_js/UU6Qb8aV"></script>
+<p>That's because you don't know how long the image will take to download, so when you come to run the second line it will throw an error (possibly intermittently, possibly every time) because the response is not yet available. Instead, you need your code to wait until the response is returned before it tries to do anything else to it.</p>
+<p>There are two main types of asynchronous code style you'll come across in JavaScript code, old-style callbacks and newer promise-style code.</p>
+<p><strong>Async callbacks</strong></p>
+<p>Async callbacks are functions that are specified as arguments when calling a function which will start executing code in the background. When the background code finishes running, it calls the callback function to let you know the work is done, or to let you know that something of interest has happened. Using callbacks is slightly old-fashioned now, but you'll still see them in use in a number of older-but-still-commonly-used APIs.</p>
+<p><strong>Promises</strong></p>
+<p>Promises are the new style of async code that you'll see used in modern Web APIs. A good example is the fetch() API, which is basically like a modern, more efficient version of XMLHttpRequest.</p>
+
+<hr>
+<h3>Cooperative asynchronous JavaScript: Timeouts and intervals</h3>
 <p></p>
 
 </body>
