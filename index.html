@@ -151,13 +151,13 @@
 <h3>Basic math in JavaScript — numbers and operators</h3>
 <strong>Types of numbers</strong>
 <p>In programming, even the humble decimal number system that we all know so well is more complicated than you might think. We use different terms to describe different types of decimal numbers, for example:</p>
-<li><strong>Integers</strong> are floating-point numbers without a fraction. They can either be positive or negative, e.g. 10, 400, or -5.</li>
-<li><strong>Floating point numbers (floats)</strong> have decimal points and decimal places, for example 12.5, and 56.7786543.</li>
-<li><strong>Doubles</strong> are a specific type of floating point number that have greater precision than standard floating point numbers (meaning that they are accurate to a greater number of decimal places).</li>
+<p><li><strong>Integers</strong> are floating-point numbers without a fraction. They can either be positive or negative, e.g. 10, 400, or -5.</li></p>
+<p><li><strong>Floating point numbers (floats)</strong> have decimal points and decimal places, for example 12.5, and 56.7786543.</li></p>
+<p><li><strong>Doubles</strong> are a specific type of floating point number that have greater precision than standard floating point numbers (meaning that they are accurate to a greater number of decimal places).</li></p>
 <p>We even have different types of number systems! Decimal is base 10 (meaning it uses 0–9 in each column), but we also have things like:</p>
-<li><strong>Binary</strong> — The lowest level language of computers; 0s and 1s.</li>
-<li><strong>Octal</strong> — Base 8, uses 0–7 in each column.</li>
-<li><strong>Hexadecimal</strong> — Base 16, uses 0–9 and then a–f in each column. You may have encountered these numbers before when setting colors in CSS.</li>
+<p><li><strong>Binary</strong> — The lowest level language of computers; 0s and 1s.</li></p>
+<p><li><strong>Octal</strong> — Base 8, uses 0–7 in each column.</li></p>
+<p><li><strong>Hexadecimal</strong> — Base 16, uses 0–9 and then a–f in each column. You may have encountered these numbers before when setting colors in CSS.</li></p>
 <p><strong>Operator precedence</strong></p>
 <p>Some operators are applied before others when calculating the result of a calculation (referred to as an expression, in programming).  Operator precedence in JavaScript is the same as is taught in math classes in school — Multiply and divide are always done first, then add and subtract (the calculation is always evaluated from left to right).</p>
 <p>If you want to override operator precedence, you can put parentheses round the parts that you want to be explicitly dealt with first.</p>
@@ -253,19 +253,19 @@
 <p><strong>A series of fortunate events</strong></p>
 <p>As mentioned above, events are actions or occurrences that happen in the system you are programming — the system produces (or "fires") a signal of some kind when an event occurs, and provides a mechanism by which an action can be automatically taken (that is, some code running) when the event occurs. For example, in an airport, when the runway is clear for take off, a signal is communicated to the pilot. As a result, the plane can safely takeoff.</p>
 <p>In the case of the Web, events are fired inside the browser window, and tend to be attached to a specific item that resides in it — this might be a single element, set of elements, the HTML document loaded in the current tab, or the entire browser window. There are many different types of events that can occur. For example:</p>
-<li>The user selects a certain element or hovers the cursor over a certain element.</li>
-<li>The user chooses a key on the keyboard.</li>
-<li>The user resizes or closes the browser window.</li>
-<li>A web page finishes loading.</li>
-<li>A form is submitted.</li>
-<li>A video is played, paused, or finishes.</li>
-<li>An error occurs.</li>
+<p><li>The user selects a certain element or hovers the cursor over a certain element.</li></p>
+<p><li>The user chooses a key on the keyboard.</li></p>
+<p><li>The user resizes or closes the browser window.</li></p>
+<p><li>A web page finishes loading.</li></p>
+<p><li>A form is submitted.</li></p>
+<p><li>A video is played, paused, or finishes.</li></p>
+<p><li>An error occurs.</li></p>
 <p><div class="info">Each available event has an event handler, which is a block of code (usually a JavaScript function that you as a programmer create) that runs when the event fires. When such a block of code is defined to run in response to an event, we say we are registering an event handler. Note: Event handlers are sometimes called event listeners — they are pretty much interchangeable for our purposes, although strictly speaking, they work together. The listener listens out for the event happening, and the handler is the code that is run in response to it happening.</div></p>
 <div class="info">Note: Web events are not part of the core JavaScript language — they are defined as part of the APIs built into the browser.</div>
 <p><strong>What mechanism should I use?</strong></p>
 <p>There are only two methods you should consider for handling events:</p>
-<li>Event handler properties have less power and options, but are easier to use. So as you begin learning, you might want to start with these.</li>
-<li>addEventListener() is more complex, but also more powerful. So after you’ve begun learning, you should try to use it where possible.</li>
+<p><li>Event handler properties have less power and options, but are easier to use. So as you begin learning, you might want to start with these.</li></p>
+<p><li>addEventListener() is more complex, but also more powerful. So after you’ve begun learning, you should try to use it where possible.</li></p>
 
 <h1>Introducing JavaScript objects</h1>
 <h3>JavaScript object basics</h3>
@@ -305,11 +305,11 @@
 <p>As described above, JSON is a string whose format very much resembles JavaScript object literal format. You can include the same basic data types inside JSON as you can in a standard JavaScript object — strings, numbers, arrays, booleans, and other object literals. This allows you to construct a data hierarchy, like so:</p>
 <script src="https://pastebin.com/embed_js/n2Q1bHBG"></script>
 <p><strong>Other notes</strong></p>
-<li>JSON is purely a string with a specified data format — it contains only properties, no methods.</li>
-<li>JSON requires double quotes to be used around strings and property names. Single quotes are not valid other than surrounding the entire JSON string.</li>
-<li>Even a single misplaced comma or colon can cause a JSON file to go wrong, and not work. You should be careful to validate any data you are attempting to use (although computer-generated JSON is less likely to include errors, as long as the generator program is working correctly). You can validate JSON using an application like JSONLint.</li>
-<li>JSON can actually take the form of any data type that is valid for inclusion inside JSON, not just arrays or objects. So for example, a single string or number would be valid JSON.</li>
-<li>Unlike in JavaScript code in which object properties may be unquoted, in JSON only quoted strings may be used as properties.</li>
+<p><li>JSON is purely a string with a specified data format — it contains only properties, no methods.</li></p>
+<p><li>JSON requires double quotes to be used around strings and property names. Single quotes are not valid other than surrounding the entire JSON string.</li></p>
+<p><li>Even a single misplaced comma or colon can cause a JSON file to go wrong, and not work. You should be careful to validate any data you are attempting to use (although computer-generated JSON is less likely to include errors, as long as the generator program is working correctly). You can validate JSON using an application like JSONLint.</li></p>
+<p><li>JSON can actually take the form of any data type that is valid for inclusion inside JSON, not just arrays or objects. So for example, a single string or number would be valid JSON.</li></p>
+<p><li>Unlike in JavaScript code in which object properties may be unquoted, in JSON only quoted strings may be used as properties.</li></p>
 <hr>
 <h3>Object building practice</h3>
 <p>Nothing to see here.</p>
@@ -374,6 +374,31 @@ Mac users, for example, sometimes experience this as the spinning rainbow-colore
 <hr>
 <h3>Choosing the right approach</h3>
 <p><p>Nothing to see here.</p></p>
+
+<h1>Client-side web APIs</h1>
+<h3>Introduction to web APIs</h3>
+<p><strong>What are APIs?</strong></p>
+<p>Application Programming Interfaces (APIs) are constructs made available in programming languages to allow developers to create complex functionality more easily. They abstract more complex code away from you, providing some easier syntax to use in its place.</p>
+<p>As a real-world example, think about the electricity supply in your house, apartment, or other dwellings. If you want to use an appliance in your house, you plug it into a plug socket and it works. You don't try to wire it directly into the power supply — to do so would be really inefficient and, if you are not an electrician, difficult and dangerous to attempt.</p>
+<p><strong>APIs in client-side JavaScript</strong></p>
+<p>Client-side JavaScript, in particular, has many APIs available to it — these are not part of the JavaScript language itself, rather they are built on top of the core JavaScript language, providing you with extra superpowers to use in your JavaScript code. They generally fall into two categories:</p>
+<p><li>Browser APIs are built into your web browser and are able to expose data from the browser and surrounding computer environment and do useful complex things with it. For example, the Web Audio API provides JavaScript constructs for manipulating audio in the browser — taking an audio track, altering its volume, applying effects to it, etc. In the background, the browser is actually using some complex lower-level code (e.g. C++ or Rust) to do the actual audio processing. But again, this complexity is abstracted away from you by the API.</li></p>
+<p><li>Third-party APIs are not built into the browser by default, and you generally have to retrieve their code and information from somewhere on the Web. For example, the Twitter API allows you to do things like displaying your latest tweets on your website. It provides a special set of constructs you can use to query the Twitter service and return specific information.</li></p>
+<p><strong>Relationship between JavaScript, APIs, and other JavaScript tools</strong></p>
+<p>So above, we talked about what client-side JavaScript APIs are, and how they relate to the JavaScript language. Let's recap this to make it clearer, and also mention where other JavaScript tools fit in:</p>
+<div class="info"><p><li>JavaScript — A high-level scripting language built into browsers that allows you to implement functionality on web pages/apps. Note that JavaScript is also available in other programming environments, such as Node.</li></p>
+<p><li>Browser APIs — constructs built into the browser that sits on top of the JavaScript language and allows you to implement functionality more easily.</li></p>
+<p><li>Third-party APIs — constructs built into third-party platforms (e.g. Twitter, Facebook) that allow you to use some of those platform's functionality in your own web pages (for example, display your latest Tweets on your web page).</li></p>
+<p><li>JavaScript libraries — Usually one or more JavaScript files containing custom functions that you can attach to your web page to speed up or enable writing common functionality. Examples include jQuery, Mootools and React.</li></p>
+<p><li>JavaScript frameworks — The next step up from libraries, JavaScript frameworks (e.g. Angular and Ember) tend to be packages of HTML, CSS, JavaScript, and other technologies that you install and then use to write an entire web application from scratch. The key difference between a library and a framework is “Inversion of Control”. When calling a method from a library, the developer is in control. With a framework, the control is inverted: the framework calls the developer's code.</li></p></div>
+<p><strong>How do APIs work?</strong></p>
+<p>Different JavaScript APIs work in slightly different ways, but generally, they have common features and similar themes to how they work.</p>
+<p><strong>They are based on objects</strong></p>
+<p>Your code interacts with APIs using one or more JavaScript objects, which serve as containers for the data the API uses (contained in object properties), and the functionality the API makes available (contained in object methods).</p>
+
+<hr>
+<h3>Manipulating documents</h3>
+<p></p>
 
 </body>
 </html>
