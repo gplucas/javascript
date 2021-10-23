@@ -417,9 +417,31 @@ Mac users, for example, sometimes experience this as the spinning rainbow-colore
 <p><li>Page updates are a lot quicker and you don't have to wait for the page to refresh, meaning that the site feels faster and more responsive.</li></p>
 <p><li>Less data is downloaded on each update, meaning less wasted bandwidth. This may not be such a big issue on a desktop on a broadband connection, but it's a major issue on mobile devices and in developing countries that don't have ubiquitous fast Internet service.</li></p>
 <p>To speed things up even further, some sites also store assets and data on the user's computer when they are first requested, meaning that on subsequent visits they use the local versions instead of downloading fresh copies everytime the page is first loaded. The content is only reloaded from the server when it has been updated.</p>
-
 <hr>
 <h3>Third-party APIs</h3>
+<p>The APIs we've covered so far are built into the browser, but not all APIs are. Many large websites and services such as Google Maps, Twitter, Facebook, PayPal, etc. provide APIs allowing developers to make use of their data (e.g. displaying your twitter stream on your blog) or services (e.g. using Facebook login to log in your users). </p>
+<p><strong>What are third party APIs?</strong></p>
+<p>Third party APIs are APIs provided by third parties — generally companies such as Facebook, Twitter, or Google — to allow you to access their functionality via JavaScript and use it on your site. One of the most obvious examples is using mapping APIs to display custom maps on your pages.</p>
+<p><strong>They are found on third-party servers</strong></p>
+<p>Browser APIs are built into the browser — you can access them from JavaScript immediately.</p>
+<script src="https://pastebin.com/embed_js/8PMCqw7i"></script>
+<p>Third party APIs, on the other hand, are located on third party servers. To access them from JavaScript you first need to connect to the API functionality and make it available on your page. This typically involves first linking to a JavaScript library available on the server via a script element, as seen in our Mapquest example:</p>
+<script src="https://pastebin.com/embed_js/YeZMW9xm"></script>
+<p>You can then start using the objects available in that library. For example:</p>
+<script src="https://pastebin.com/embed_js/Ch8XXkFq"></script>
+<p>Here we are creating a variable to store the map information in, then creating a new map using the mapquest.map() method, which takes as its parameters the ID of a div element you want to display the map in ('map'), and an options object containing the details of the particular map we want to display. In this case we specify the coordinates of the center of the map, a map layer of type map to show (created using the mapquest.tileLayer() method), and the default zoom level.</p>
+<p>This is all the information the Mapquest API needs to plot a simple map. The server you are connecting to handles all the complicated stuff, like displaying the correct map tiles for the area being shown, etc.</p>
+<div class="info">Note: Some APIs handle access to their functionality slightly differently, requiring the developer to make an HTTP request to a specific URL pattern to retrieve data. These are called RESTful APIs.</div>
+<p><strong>They usually require API keys</strong></p>
+<p>Third party APIs have a slightly different permissions system — they tend to use developer keys to allow developers access to the API functionality, which is more to protect the API vendor than the user.</p>
+<p>You'll find a line similar to the following in the Mapquest API example:</p>
+<p><strong>L.mapquest.key = 'YOUR-API-KEY-HERE';</strong></p>
+<div class="info">This line specifies an API or developer key to use in your application — the developer of the application must apply to get a key, and then include it in their code to be allowed access to the API's functionality. In our example we've just provided a placeholder.</div>
+<p>Other APIs may require that you include the key in a slightly different way, but the pattern is relatively similar for most of them.</p>
+<p>Requiring a key enables the API provider to hold users of the API accountable for their actions. When the developer has registered for a key, they are then known to the API provider, and action can be taken if they start to do anything malicious with the API (such as tracking people's location or trying to spam the API with loads of requests to stop it working, for example). The easiest action would be to just revoke their API privileges.</p>
+
+<hr>
+<h3>Drawing graphics</h3>
 <p></p>
 
 </body>
