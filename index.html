@@ -56,7 +56,7 @@
   <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await" target="_blank">Making asynchronous programming easier with async and await</a></li>
   <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach" target="_blank">Choosing the right approach</a></li>
 </ol>
-<h3>Client-side web APIs <span class="studying">Studying</span></h3>
+<h3>Client-side web APIs <span class="completed">Completed</span></h3>
 <!-- Fifth ordered list -->
 <ol>
   <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction" target="_blank">Introduction to web APIs</a></li>
@@ -445,10 +445,27 @@ Mac users, for example, sometimes experience this as the spinning rainbow-colore
 <hr>
 <h3>Video and Audio APIs</h3>
 <p>Nothing to see here.</p>
-
 <hr>
 <h3>Client-side storage</h3>
-<p></p>
+<p>Modern web browsers support a number of ways for web sites to store data on the user's computer — with the user's permission — then retrieve it when necessary. This lets you persist data for long-term storage, save sites or documents for offline use, retain user-specific settings for your site, and more.</p>
+<p>Most major modern web sites are dynamic — they store data on the server using some kind of database (server-side storage), then run server-side code to retrieve needed data, insert it into static page templates, and serve the resulting HTML to the client to be displayed by the user's browser.</p>
+<p>Client-side storage works on similar principles, but has different uses. It consists of JavaScript APIs that allow you to store data on the client (i.e. on the user's machine) and then retrieve it when needed. This has many distinct uses, such as:</p>
+<li>Personalizing site preferences (e.g. showing a user's choice of custom widgets, color scheme, or font size).</li>
+<li>Persisting previous site activity (e.g. storing the contents of a shopping cart from a previous session, remembering if a user was previously logged in).</li>
+<li>Saving data and assets locally so a site will be quicker (and potentially less expensive) to download, or be usable without a network connection.</li>
+<li>Saving web application generated documents locally for use offline</li>
+<p>Often client-side and server-side storage are used together. For example, you could download a batch of music files (perhaps used by a web game or music player application), store them inside a client-side database, and play them as needed. The user would only have to download the music files once — on subsequent visits they would be retrieved from the database instead.</p>
+<div class="info">Note: There are limits to the amount of data you can store using client-side storage APIs (possibly both per individual API and cumulatively); the exact limit varies depending on the browser and possibly based on user settings.</div>
+<p><strong>Old school: Cookies</strong></p>
+<p>The concept of client-side storage has been around for a long time. Since the early days of the web, sites have used cookies to store information to personalize user experience on websites. They're the earliest form of client-side storage commonly used on the web.</p>
+<p><strong>New school: Web Storage and IndexedDB</strong></p>
+<p>The "easier" features we mentioned above are as follows:</p>
+<p><li>The Web Storage API provides a very simple syntax for storing and retrieving smaller, data items consisting of a name and a corresponding value. This is useful when you just need to store some simple data, like the user's name, whether they are logged in, what color to use for the background of the screen, etc.</li></p>
+<p><li>The IndexedDB API provides the browser with a complete database system for storing complex data. This can be used for things from complete sets of customer records to even complex data types like audio or video files.</li></p>
+<p><strong>The future: Cache API</strong></p>
+<p>Some modern browsers support the new Cache API. This API is designed for storing HTTP responses to specific requests, and is very useful for doing things like storing website assets offline so the site can subsequently be used without a network connection. Cache is usually used in combination with the Service Worker API, although it doesn't have to be.</p>
+<hr>
+<p><center>It's all folks!</center></p>
 
 </body>
 </html>
