@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>JavaScript Notes</title>
 <link rel="icon" href="https://camo.githubusercontent.com/442c452cb73752bb1914ce03fce2017056d651a2099696b8594ddf5ccc74825e/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e2f69636f6e732f6a6176617363726970742f6a6176617363726970742d6f726967696e616c2e737667">
@@ -78,18 +78,18 @@
 <h3>A first splash into JavaScript</h3>
 <p>Thinking like a programmer - One of the hardest things to learn in programming is not the syntax you need to learn, but how to apply it to solve real world problems. You need to start thinking like a programmer — this generally involves looking at descriptions of what your program needs to do, working out what code features are needed to achieve those things, and how to make them work together.</p>
 <p>This requires a mixture of hard work, experience with the programming syntax, and practice — plus a bit of creativity. The more you code, the better you'll get at it.</p>
-<li><strong>Functions</strong></li>
+<ul><li><strong>Functions</strong></li></ul>
 <p>Functions are reusable blocks of code that you can write once and run again and again, saving the need to keep repeating code all the time. This is really useful. There are a number of ways to define functions, but for now we'll concentrate on one simple type. Here we have defined a function by using the keyword function, followed by a name, with parentheses put after it. After that we put two curly braces ({ }). Inside the curly braces goes all the code that we want to run whenever we call the function.</p>
 <p>When we want to run the code, we type the name of the function followed by the parentheses.</p>
 <script src="https://pastebin.com/embed_js/wUAfkD7k"></script>
-<li><strong>Operators</strong></li>
+<ul><li><strong>Operators</strong></li></ul>
 <p>JavaScript operators allow us to perform tests, do math, join strings together, and other such things.</p>
-<li><strong>Conditionals</strong></li>
+<ul><li><strong>Conditionals</strong></li></ul>
 <p>A conditional code block allows you to run code selectively, depending on whether a certain condition is true or not. It looks a bit like a function, but it isn't. The simplest form of conditional block starts with the keyword if, then some parentheses, then some curly braces. Inside the parentheses we include a test. If the test returns true, we run the code inside the curly braces. If not, we don't, and move on to the next bit of code.</p>
 <script src="https://pastebin.com/embed_js/taWiHANv"></script>
-<li><strong>Events</strong></li>
+<ul><li><strong>Events</strong></li></ul>
 <p>Events are things that happen in the browser — a button being clicked, a page loading, a video playing, etc. — in response to which we can run blocks of code. The constructs that listen out for the event happening are called event listeners, and the blocks of code that run in response to the event firing are called event handlers.</p>
-<li><strong>Loops</strong></li>
+<ul><li><strong>Loops</strong></li></ul>
 <p>Loops are a very important concept in programming, which allow you to keep running a piece of code over and over again, until a certain condition is met.</p>
 <hr>
 <h3>What went wrong? Troubleshooting JavaScript</h3>
@@ -151,13 +151,13 @@
 <h3>Basic math in JavaScript — numbers and operators</h3>
 <strong>Types of numbers</strong>
 <p>In programming, even the humble decimal number system that we all know so well is more complicated than you might think. We use different terms to describe different types of decimal numbers, for example:</p>
-<p><li><strong>Integers</strong> are floating-point numbers without a fraction. They can either be positive or negative, e.g. 10, 400, or -5.</li></p>
-<p><li><strong>Floating point numbers (floats)</strong> have decimal points and decimal places, for example 12.5, and 56.7786543.</li></p>
-<p><li><strong>Doubles</strong> are a specific type of floating point number that have greater precision than standard floating point numbers (meaning that they are accurate to a greater number of decimal places).</li></p>
-<p>We even have different types of number systems! Decimal is base 10 (meaning it uses 0–9 in each column), but we also have things like:</p>
-<p><li><strong>Binary</strong> — The lowest level language of computers; 0s and 1s.</li></p>
-<p><li><strong>Octal</strong> — Base 8, uses 0–7 in each column.</li></p>
-<p><li><strong>Hexadecimal</strong> — Base 16, uses 0–9 and then a–f in each column. You may have encountered these numbers before when setting colors in CSS.</li></p>
+<ul><li><strong>Integers</strong> are floating-point numbers without a fraction. They can either be positive or negative, e.g. 10, 400, or -5.</li></ul>
+<ul><li><strong>Floating point numbers (floats)</strong> have decimal points and decimal places, for example 12.5, and 56.7786543.</li></ul>
+<ul><li><strong>Doubles</strong> are a specific type of floating point number that have greater precision than standard floating point numbers (meaning that they are accurate to a greater number of decimal places).</li></ul>
+We even have different types of number systems! Decimal is base 10 (meaning it uses 0–9 in each column), but we also have things like:
+<ul><li><strong>Binary</strong> — The lowest level language of computers; 0s and 1s.</li></ul>
+<ul><li><strong>Octal</strong> — Base 8, uses 0–7 in each column.</li></ul>
+<ul><li><strong>Hexadecimal</strong> — Base 16, uses 0–9 and then a–f in each column. You may have encountered these numbers before when setting colors in CSS.</li></ul>
 <p><strong>Operator precedence</strong></p>
 <p>Some operators are applied before others when calculating the result of a calculation (referred to as an expression, in programming).  Operator precedence in JavaScript is the same as is taught in math classes in school — Multiply and divide are always done first, then add and subtract (the calculation is always evaluated from left to right).</p>
 <p>If you want to override operator precedence, you can put parentheses round the parts that you want to be explicitly dealt with first.</p>
@@ -253,19 +253,19 @@
 <p><strong>A series of fortunate events</strong></p>
 <p>As mentioned above, events are actions or occurrences that happen in the system you are programming — the system produces (or "fires") a signal of some kind when an event occurs, and provides a mechanism by which an action can be automatically taken (that is, some code running) when the event occurs. For example, in an airport, when the runway is clear for take off, a signal is communicated to the pilot. As a result, the plane can safely takeoff.</p>
 <p>In the case of the Web, events are fired inside the browser window, and tend to be attached to a specific item that resides in it — this might be a single element, set of elements, the HTML document loaded in the current tab, or the entire browser window. There are many different types of events that can occur. For example:</p>
-<p><li>The user selects a certain element or hovers the cursor over a certain element.</li></p>
-<p><li>The user chooses a key on the keyboard.</li></p>
-<p><li>The user resizes or closes the browser window.</li></p>
-<p><li>A web page finishes loading.</li></p>
-<p><li>A form is submitted.</li></p>
-<p><li>A video is played, paused, or finishes.</li></p>
-<p><li>An error occurs.</li></p>
-<p><div class="info">Each available event has an event handler, which is a block of code (usually a JavaScript function that you as a programmer create) that runs when the event fires. When such a block of code is defined to run in response to an event, we say we are registering an event handler. Note: Event handlers are sometimes called event listeners — they are pretty much interchangeable for our purposes, although strictly speaking, they work together. The listener listens out for the event happening, and the handler is the code that is run in response to it happening.</div></p>
+<ul><li>The user selects a certain element or hovers the cursor over a certain element.</li></ul>
+<ul><li>The user chooses a key on the keyboard.</li></ul>
+<ul><li>The user resizes or closes the browser window.</li></ul>
+<ul><li>A web page finishes loading.</li></ul>
+<ul><li>A form is submitted.</li></ul>
+<ul><li>A video is played, paused, or finishes.</li></ul>
+<ul><li>An error occurs.</li></ul>
+<div class="info">Each available event has an event handler, which is a block of code (usually a JavaScript function that you as a programmer create) that runs when the event fires. When such a block of code is defined to run in response to an event, we say we are registering an event handler. Note: Event handlers are sometimes called event listeners — they are pretty much interchangeable for our purposes, although strictly speaking, they work together. The listener listens out for the event happening, and the handler is the code that is run in response to it happening.</div>
 <div class="info">Note: Web events are not part of the core JavaScript language — they are defined as part of the APIs built into the browser.</div>
 <p><strong>What mechanism should I use?</strong></p>
 <p>There are only two methods you should consider for handling events:</p>
-<p><li>Event handler properties have less power and options, but are easier to use. So as you begin learning, you might want to start with these.</li></p>
-<p><li>addEventListener() is more complex, but also more powerful. So after you’ve begun learning, you should try to use it where possible.</li></p>
+<ul><li>Event handler properties have less power and options, but are easier to use. So as you begin learning, you might want to start with these.</li></ul>
+<ul><li>addEventListener() is more complex, but also more powerful. So after you’ve begun learning, you should try to use it where possible.</li></ul>
 
 <h1>Introducing JavaScript objects</h1>
 <h3>JavaScript object basics</h3>
@@ -305,11 +305,11 @@
 <p>As described above, JSON is a string whose format very much resembles JavaScript object literal format. You can include the same basic data types inside JSON as you can in a standard JavaScript object — strings, numbers, arrays, booleans, and other object literals. This allows you to construct a data hierarchy, like so:</p>
 <script src="https://pastebin.com/embed_js/n2Q1bHBG"></script>
 <p><strong>Other notes</strong></p>
-<p><li>JSON is purely a string with a specified data format — it contains only properties, no methods.</li></p>
-<p><li>JSON requires double quotes to be used around strings and property names. Single quotes are not valid other than surrounding the entire JSON string.</li></p>
-<p><li>Even a single misplaced comma or colon can cause a JSON file to go wrong, and not work. You should be careful to validate any data you are attempting to use (although computer-generated JSON is less likely to include errors, as long as the generator program is working correctly). You can validate JSON using an application like JSONLint.</li></p>
-<p><li>JSON can actually take the form of any data type that is valid for inclusion inside JSON, not just arrays or objects. So for example, a single string or number would be valid JSON.</li></p>
-<p><li>Unlike in JavaScript code in which object properties may be unquoted, in JSON only quoted strings may be used as properties.</li></p>
+<ul><li>JSON is purely a string with a specified data format — it contains only properties, no methods.</li></ul>
+<ul><li>JSON requires double quotes to be used around strings and property names. Single quotes are not valid other than surrounding the entire JSON string.</li></ul>
+<ul><li>Even a single misplaced comma or colon can cause a JSON file to go wrong, and not work. You should be careful to validate any data you are attempting to use (although computer-generated JSON is less likely to include errors, as long as the generator program is working correctly). You can validate JSON using an application like JSONLint.</li></ul>
+<ul><li>JSON can actually take the form of any data type that is valid for inclusion inside JSON, not just arrays or objects. So for example, a single string or number would be valid JSON.</li></ul>
+<ul><li>Unlike in JavaScript code in which object properties may be unquoted, in JSON only quoted strings may be used as properties.</li></ul>
 <hr>
 <h3>Object building practice</h3>
 <p>Nothing to see here.</p>
@@ -373,7 +373,7 @@ Mac users, for example, sometimes experience this as the spinning rainbow-colore
 <p>You'll note that we've wrapped the code inside a function, and we've included the async keyword before the function keyword. This is necessary — you have to create an async function to define a block of code in which you'll run your async code; as we said earlier, await only works inside of async functions.</p>
 <hr>
 <h3>Choosing the right approach</h3>
-<p><p>Nothing to see here.</p></p>
+<p>Nothing to see here.</p>
 
 <h1>Client-side web APIs</h1>
 <h3>Introduction to web APIs</h3>
@@ -382,15 +382,15 @@ Mac users, for example, sometimes experience this as the spinning rainbow-colore
 <p>As a real-world example, think about the electricity supply in your house, apartment, or other dwellings. If you want to use an appliance in your house, you plug it into a plug socket and it works. You don't try to wire it directly into the power supply — to do so would be really inefficient and, if you are not an electrician, difficult and dangerous to attempt.</p>
 <p><strong>APIs in client-side JavaScript</strong></p>
 <p>Client-side JavaScript, in particular, has many APIs available to it — these are not part of the JavaScript language itself, rather they are built on top of the core JavaScript language, providing you with extra superpowers to use in your JavaScript code. They generally fall into two categories:</p>
-<p><li>Browser APIs are built into your web browser and are able to expose data from the browser and surrounding computer environment and do useful complex things with it. For example, the Web Audio API provides JavaScript constructs for manipulating audio in the browser — taking an audio track, altering its volume, applying effects to it, etc. In the background, the browser is actually using some complex lower-level code (e.g. C++ or Rust) to do the actual audio processing. But again, this complexity is abstracted away from you by the API.</li></p>
-<p><li>Third-party APIs are not built into the browser by default, and you generally have to retrieve their code and information from somewhere on the Web. For example, the Twitter API allows you to do things like displaying your latest tweets on your website. It provides a special set of constructs you can use to query the Twitter service and return specific information.</li></p>
+<ul><li>Browser APIs are built into your web browser and are able to expose data from the browser and surrounding computer environment and do useful complex things with it. For example, the Web Audio API provides JavaScript constructs for manipulating audio in the browser — taking an audio track, altering its volume, applying effects to it, etc. In the background, the browser is actually using some complex lower-level code (e.g. C++ or Rust) to do the actual audio processing. But again, this complexity is abstracted away from you by the API.</li></ul>
+<ul><li>Third-party APIs are not built into the browser by default, and you generally have to retrieve their code and information from somewhere on the Web. For example, the Twitter API allows you to do things like displaying your latest tweets on your website. It provides a special set of constructs you can use to query the Twitter service and return specific information.</li></ul>
 <p><strong>Relationship between JavaScript, APIs, and other JavaScript tools</strong></p>
 <p>So above, we talked about what client-side JavaScript APIs are, and how they relate to the JavaScript language. Let's recap this to make it clearer, and also mention where other JavaScript tools fit in:</p>
-<div class="info"><p><li>JavaScript — A high-level scripting language built into browsers that allows you to implement functionality on web pages/apps. Note that JavaScript is also available in other programming environments, such as Node.</li></p>
-<p><li>Browser APIs — constructs built into the browser that sits on top of the JavaScript language and allows you to implement functionality more easily.</li></p>
-<p><li>Third-party APIs — constructs built into third-party platforms (e.g. Twitter, Facebook) that allow you to use some of those platform's functionality in your own web pages (for example, display your latest Tweets on your web page).</li></p>
-<p><li>JavaScript libraries — Usually one or more JavaScript files containing custom functions that you can attach to your web page to speed up or enable writing common functionality. Examples include jQuery, Mootools and React.</li></p>
-<p><li>JavaScript frameworks — The next step up from libraries, JavaScript frameworks (e.g. Angular and Ember) tend to be packages of HTML, CSS, JavaScript, and other technologies that you install and then use to write an entire web application from scratch. The key difference between a library and a framework is “Inversion of Control”. When calling a method from a library, the developer is in control. With a framework, the control is inverted: the framework calls the developer's code.</li></p></div>
+<div class="info"><p><ul><li>JavaScript — A high-level scripting language built into browsers that allows you to implement functionality on web pages/apps. Note that JavaScript is also available in other programming environments, such as Node.</li></ul>
+<ul><li>Browser APIs — constructs built into the browser that sits on top of the JavaScript language and allows you to implement functionality more easily.</li></ul>
+<ul><li>Third-party APIs — constructs built into third-party platforms (e.g. Twitter, Facebook) that allow you to use some of those platform's functionality in your own web pages (for example, display your latest Tweets on your web page).</li></ul>
+<ul><li>JavaScript libraries — Usually one or more JavaScript files containing custom functions that you can attach to your web page to speed up or enable writing common functionality. Examples include jQuery, Mootools and React.</li></ul>
+<ul><li>JavaScript frameworks — The next step up from libraries, JavaScript frameworks (e.g. Angular and Ember) tend to be packages of HTML, CSS, JavaScript, and other technologies that you install and then use to write an entire web application from scratch. The key difference between a library and a framework is “Inversion of Control”. When calling a method from a library, the developer is in control. With a framework, the control is inverted: the framework calls the developer's code.</li></ul></div>
 <p><strong>How do APIs work?</strong></p>
 <p>Different JavaScript APIs work in slightly different ways, but generally, they have common features and similar themes to how they work.</p>
 <p><strong>They are based on objects</strong></p>
@@ -414,8 +414,8 @@ Mac users, for example, sometimes experience this as the spinning rainbow-colore
 <ol><li><p>Go to one of your favorite information-rich sites, like Amazon, YouTube, CNN, etc., and load it.</p></li>
 <li><p>Now search for something, like a new product. The main content will change, but most of the surrounding information, like the header, footer, navigation menu, etc., will stay the same.</p></li></ol>
 <p>This is a really good thing because:</p>
-<p><li>Page updates are a lot quicker and you don't have to wait for the page to refresh, meaning that the site feels faster and more responsive.</li></p>
-<p><li>Less data is downloaded on each update, meaning less wasted bandwidth. This may not be such a big issue on a desktop on a broadband connection, but it's a major issue on mobile devices and in developing countries that don't have ubiquitous fast Internet service.</li></p>
+<ul><li>Page updates are a lot quicker and you don't have to wait for the page to refresh, meaning that the site feels faster and more responsive.</li></ul>
+<ul><li>Less data is downloaded on each update, meaning less wasted bandwidth. This may not be such a big issue on a desktop on a broadband connection, but it's a major issue on mobile devices and in developing countries that don't have ubiquitous fast Internet service.</li></ul>
 <p>To speed things up even further, some sites also store assets and data on the user's computer when they are first requested, meaning that on subsequent visits they use the local versions instead of downloading fresh copies everytime the page is first loaded. The content is only reloaded from the server when it has been updated.</p>
 <hr>
 <h3>Third-party APIs</h3>
@@ -450,22 +450,22 @@ Mac users, for example, sometimes experience this as the spinning rainbow-colore
 <p>Modern web browsers support a number of ways for web sites to store data on the user's computer — with the user's permission — then retrieve it when necessary. This lets you persist data for long-term storage, save sites or documents for offline use, retain user-specific settings for your site, and more.</p>
 <p>Most major modern web sites are dynamic — they store data on the server using some kind of database (server-side storage), then run server-side code to retrieve needed data, insert it into static page templates, and serve the resulting HTML to the client to be displayed by the user's browser.</p>
 <p>Client-side storage works on similar principles, but has different uses. It consists of JavaScript APIs that allow you to store data on the client (i.e. on the user's machine) and then retrieve it when needed. This has many distinct uses, such as:</p>
-<li>Personalizing site preferences (e.g. showing a user's choice of custom widgets, color scheme, or font size).</li>
-<li>Persisting previous site activity (e.g. storing the contents of a shopping cart from a previous session, remembering if a user was previously logged in).</li>
-<li>Saving data and assets locally so a site will be quicker (and potentially less expensive) to download, or be usable without a network connection.</li>
-<li>Saving web application generated documents locally for use offline</li>
+<ul><li>Personalizing site preferences (e.g. showing a user's choice of custom widgets, color scheme, or font size).</li></ul>
+<ul><li>Persisting previous site activity (e.g. storing the contents of a shopping cart from a previous session, remembering if a user was previously logged in).</li></ul>
+<ul><li>Saving data and assets locally so a site will be quicker (and potentially less expensive) to download, or be usable without a network connection.</li></ul>
+<ul><li>Saving web application generated documents locally for use offline</li></ul>
 <p>Often client-side and server-side storage are used together. For example, you could download a batch of music files (perhaps used by a web game or music player application), store them inside a client-side database, and play them as needed. The user would only have to download the music files once — on subsequent visits they would be retrieved from the database instead.</p>
 <div class="info">Note: There are limits to the amount of data you can store using client-side storage APIs (possibly both per individual API and cumulatively); the exact limit varies depending on the browser and possibly based on user settings.</div>
 <p><strong>Old school: Cookies</strong></p>
 <p>The concept of client-side storage has been around for a long time. Since the early days of the web, sites have used cookies to store information to personalize user experience on websites. They're the earliest form of client-side storage commonly used on the web.</p>
 <p><strong>New school: Web Storage and IndexedDB</strong></p>
 <p>The "easier" features we mentioned above are as follows:</p>
-<p><li>The Web Storage API provides a very simple syntax for storing and retrieving smaller, data items consisting of a name and a corresponding value. This is useful when you just need to store some simple data, like the user's name, whether they are logged in, what color to use for the background of the screen, etc.</li></p>
-<p><li>The IndexedDB API provides the browser with a complete database system for storing complex data. This can be used for things from complete sets of customer records to even complex data types like audio or video files.</li></p>
+<ul><li>The Web Storage API provides a very simple syntax for storing and retrieving smaller, data items consisting of a name and a corresponding value. This is useful when you just need to store some simple data, like the user's name, whether they are logged in, what color to use for the background of the screen, etc.</li></ul>
+<ul><li>The IndexedDB API provides the browser with a complete database system for storing complex data. This can be used for things from complete sets of customer records to even complex data types like audio or video files.</li></ul>
 <p><strong>The future: Cache API</strong></p>
 <p>Some modern browsers support the new Cache API. This API is designed for storing HTTP responses to specific requests, and is very useful for doing things like storing website assets offline so the site can subsequently be used without a network connection. Cache is usually used in combination with the Service Worker API, although it doesn't have to be.</p>
 <hr>
-<p><center>It's all folks!</center></p>
+<p class="center">It's all folks!</p>
 
 </body>
 </html>
